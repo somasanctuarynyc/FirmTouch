@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Firm Touch NYC | LMT | Executive Neuromuscular Therapeutics</title>
+  <style>
+    @font-face {
+      font-family: Praetoria;
+      src: url("https://static.wixstatic.com/ufonts/79388b_213a12b100fe4bac9f94321056414e08/woff2/file.woff2") format("woff2");
+      font-weight: 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: DINNext;
+      src: url("https://static.parastorage.com/fonts/v2/eca8b0cd-45d8-43cf-aee7-ca462bc5497c/v1/din-next-w01-light.woff2") format("woff2");
+      font-weight: 300;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: AvenirHeavy;
+      src: url("https://static.parastorage.com/fonts/v2/74290729-59ae-4129-87d0-2eec3974dce1/v1/avenir-lt-w01_85-heavy1475544.woff2") format("woff2");
+      font-weight: 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: SubCaps;
+      src: url("https://static.wixstatic.com/ufonts/79388b_ace6e577c8a542d0a60f84e31aec16bd/woff2/file.woff2") format("woff2");
+      font-weight: 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: EBGaramond;
+      src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/ebgaramond/v12/SlGWmQSNjdsmc35JDF1K5GRweDQ1ZyHKpWiGIg.woff2") format("woff2");
+      font-weight: 400;
+      font-display: swap;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: #f4f2ee;
+      color: #5e5e5e;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 1.45;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .floor, .pillar { max-width: none; }
+
+    header {
+      z-index: 20;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 14px 22px 6px;
+      position: sticky;
+      top: 0;
+      background: #fff;
+    }
+    .phone {
+      grid-column: 2;
+      text-decoration: none;
+      color: #000;
+      font-family: Praetoria, Didot, serif;
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+    header img { grid-column: 3; justify-self: end; width: 44px; height: 44px; object-fit: cover; }
+
+    .hero {
+      position: relative;
+      min-height: 700px;
+      padding: 108px 16px 210px;
+      text-align: center;
+      overflow: hidden;
+      background: #f4f2ee;
+    }
+    .marble {
+      position: absolute;
+      left: -6%;
+      width: 112%;
+      top: -22%;
+      height: 150%;
+      background: url("img/marble.jpg") center 30% / cover no-repeat;
+      z-index: 0;
+      will-change: transform;
+    }
+    .floor {
+      position: absolute;
+      left: calc(50% - 804px);
+      bottom: 78px;
+      width: 1608px;
+      height: 317px;
+      object-fit: cover;
+      object-position: center 62%;
+      z-index: 1;
+      will-change: transform;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%);
+      mask-image: linear-gradient(to bottom, transparent 0%, #000 22%);
+    }
+    .pillar {
+      position: absolute;
+      top: -78px;
+      height: 830px;
+      width: auto;
+      z-index: 2;
+      will-change: transform;
+      pointer-events: none;
+    }
+    .pillar.l { left: calc(50% - 836px); }
+    .pillar.r { right: calc(50% - 817px); }
+    .hero-copy { position: relative; z-index: 3; animation: settle 0.9s ease both; }
+    @keyframes settle {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: none; }
+    }
+    h1 {
+      font-family: Praetoria, "Bodoni Moda", Didot, serif;
+      font-weight: 700;
+      margin: 0;
+      font-size: 100px;
+      letter-spacing: 0.4em;
+      line-height: 1.04;
+      color: #000;
+      text-indent: 0.4em;
+      text-shadow: rgba(255,255,255,0.6) 1px 1px 1px, rgba(0,0,0,0.6) -1px -1px 1px;
+    }
+    .sub {
+      display: inline-block;
+      margin-top: 26px;
+      color: #000;
+      text-decoration: none;
+      font-family: SubCaps, DINNext, sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 8.4px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 228px;
+      min-height: 46px;
+      margin-top: 28px;
+      padding: 0 18px;
+      background: #323232;
+      color: #fff;
+      text-decoration: none;
+      font-family: EBGaramond, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: 16px;
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+    .btn:hover { background: #111; transform: translateY(-1px); }
+    .hero .btn { margin-top: 128px; }
+
+    .sheet {
+      position: relative;
+      z-index: 3;
+      max-width: 980px;
+      margin: -168px auto 0;
+      padding: 0 20px;
+    }
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 451px;
+      background: rgba(255,255,255,0.94);
+      box-shadow: 0 18px 50px rgba(40, 36, 30, 0.08);
+    }
+    .card > img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+    .card .copy { padding: 36px 34px 32px; }
+    .card h2 {
+      margin: 0 0 10px;
+      font-family: Praetoria, Didot, serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #5e5e5e;
+      line-height: 1.15;
+    }
+    .card h2 .k { display: block; font-size: 18px; letter-spacing: 2.42px; }
+    .card h2 .big { display: block; font-size: 31px; letter-spacing: 3.3px; }
+    .rule { width: 92px; height: 1px; margin: 0 0 18px; border: 0; background: #5e5e5e; }
+    .copy p { margin: 0 0 14px; }
+
+    .band {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 36px;
+    }
+    .band .marble { top: -30%; height: 170%; }
+    .panel {
+      position: relative;
+      z-index: 1;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 42px 48px 36px;
+      background: rgba(236,236,234,0.92);
+    }
+    .panel h2 {
+      margin: 0 0 8px;
+      font-family: Praetoria, Didot, serif;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 4.4px;
+      color: #5e5e5e;
+    }
+    .panel p { font-size: 16px; }
+    .panel .subhead { font-size: 18px; margin-top: 8px; }
+    .panel .rule { margin-bottom: 22px; }
+    .panel p, .below p { margin: 0 0 14px; }
+    .panel ul { margin: 0 0 14px; padding-left: 1.1rem; }
+
+    .photos {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 36px auto 20px;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      padding: 0 20px;
+    }
+    .photos img { width: min(380px, 46vw); height: min(380px, 46vw); object-fit: cover; filter: grayscale(1); }
+
+    .below {
+      position: relative;
+      background: #e4e4e2;
+      padding: 48px 20px 72px;
+      text-align: center;
+    }
+    .below-inner { max-width: 980px; margin: 0 auto; }
+    .linkrow {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .stack, .wide {
+      background: #8a8a88;
+      color: #f7f7f7;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: Praetoria, Didot, serif;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 5.5px;
+    }
+    .stack { flex-direction: column; gap: 10px; width: 230px; min-height: 188px; padding: 22px 12px; }
+    .stack a { color: #f7f7f7; text-decoration: none; }
+    .wide-wrap { background: #fff; padding: 16px; display: flex; flex-direction: column; gap: 12px; width: max-content; max-width: 100%; }
+    .wide { width: 100%; min-height: 54px; padding: 8px 28px; font-size: 18px; letter-spacing: 3.6px; white-space: nowrap; transition: filter 0.25s ease, transform 0.25s ease; }
+    .wide.further { font-size: 22px; letter-spacing: 4.4px; }
+    .price-bar { background: #fff; max-width: 760px; margin: 26px auto 0; padding: 26px 16px 18px; }
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      max-width: 860px;
+      margin: 28px auto 0;
+      background: #b9b9b6;
+      text-align: center;
+      color: #2c2c2c;
+    }
+    .contact-copy { padding: 36px 28px 32px; }
+    .contact h2 {
+      margin: 0 0 8px;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 22px;
+      letter-spacing: 4.4px;
+      font-weight: 700;
+      color: #5e5e5e;
+    }
+    .contact p { font-size: 18px; }
+    .contact iframe { width: 100%; height: 100%; min-height: 380px; border: 0; }
+    .stack { transition: filter 0.25s ease, transform 0.25s ease; }
+    .wide:hover, .stack:hover { filter: brightness(1.12); transform: translateY(-2px); }
+    .price {
+      margin: 10px 0 6px;
+      color: #2f2e2e;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 1.1;
+    }
+    .call {
+      margin: 36px 0 0;
+      color: #5e5e5e;
+      font-family: Praetoria, Didot, serif;
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+    .call a { color: inherit; text-decoration: none; }
+    .loc {
+      margin-top: 28px;
+      font-family: AvenirHeavy, "Montserrat", sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.08em;
+      color: #111;
+    }
+    footer {
+      padding: 16px;
+      text-align: center;
+      font-size: 13px;
+      background: rgba(255,255,255,0.8);
+    }
+
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    .sheet.reveal { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero-copy { animation: none; }
+    }
+
+    @media (max-width: 1100px) {
+      h1 { font-size: 64px; letter-spacing: 0.22em; text-indent: 0.22em; }
+      .sub { font-size: 18px; letter-spacing: 4px; }
+      .hero { min-height: 560px; padding: 64px 12px 160px; }
+      .hero .btn { margin-top: 72px; }
+      .pillar { height: 560px; top: -20px; }
+      .pillar.l { left: -40px; }
+      .pillar.r { right: -40px; }
+      .floor { left: -40px; width: calc(100% + 80px); height: 240px; bottom: 36px; }
+    }
+    @media (max-width: 900px) {
+      h1 { font-size: 42px; letter-spacing: 0.14em; text-indent: 0.14em; }
+      .sub { font-size: 13px; letter-spacing: 2px; }
+      .phone { font-size: 20px; }
+      .pillar { height: 220px; top: auto; bottom: 0; }
+      .floor { left: 0; width: 100%; height: 160px; bottom: 0; }
+      .marble { display: none; }
+      .hero, .band { background: #f4f2ee url("img/marble.jpg") center / cover; }
+      .hero { min-height: 0; padding: 28px 12px 150px; }
+      .card { grid-template-columns: 1fr; }
+      .photos { flex-direction: column; align-items: center; }
+      .contact { grid-template-columns: 1fr; }
+      .linkrow { flex-direction: column; align-items: center; }
+      .pillar.l { left: 0; }
+      .pillar.r { right: 0; }
+      .panel { padding: 28px 18px; }
+      .price, .call { font-size: 32px; }
+      .wide { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="phone" href="tel:8646253348">864.625.3348</a>
+    <img src="img/seal-live.png" alt="Firm Touch">
+  </header>
+
+  <section class="hero">
+    <div class="marble" data-parallax="0.42"></div>
+    <img class="floor" data-parallax="0.28" src="img/floor.jpg" alt="">
+    <img class="pillar l" data-parallax="0.12" src="img/pillar-l.png" alt="">
+    <img class="pillar r" data-parallax="0.12" src="img/pillar-r.png" alt="">
+    <div class="hero-copy">
+      <h1>FIRM TOUCH</h1>
+      <a class="sub" href="https://www.firmtouch.nyc/ivii">EXECUTIVE NEUROMUSCULAR THERAPY</a>
+      <div><a class="btn" href="tel:8646253348">Direct Contact</a></div>
+    </div>
+  </section>
+
+  <div class="sheet reveal">
+    <div class="card">
+      <div class="copy">
+        <h2><span class="k">A new kind of</span><span class="big">Massage</span></h2>
+        <hr class="rule">
+        <p>Imagine this...</p>
+        <p>You wake up one morning with a pain in your neck, or the back of your shoulder, your hip is acting wonky, or maybe you have restricted mobility from a past injury... a past surgery.</p>
+        <p>For so many, this is their reality, "the new normal." If you've been cleared by a doctor for manual intervention, you can look forward to having your issues addressed here in one to two sessions, as opposed to subjecting subject to the typical weekly, greasy, ineffective, superficial rub and glide as part of some charlatan's well-rehearsed choreography from YouTube University.</p>
+        <p>We've all been there. Trying to find any help at all can be like pulling teeth. I provide you with knowledgeable insight as to why these things are happening, helpful ways to prevent further damage, and a neuromuscular trigger point release with pinpoint accuracy. Think: acupuncture without the needles.</p>
+        <p>Your treatment is designed to use time most effectively, garnering my direct attention for the full hour. I firmly believe massage is not supposed to damage tissue or cause undue pain, and you shouldn't be subject to gimmick after gimmick in your search for proper healthcare. In the next section I go more in depth on what you can expect when you book with Firm Touch NYC.</p>
+      </div>
+      <img src="img/clay.jpg" alt="Clay Muscle Model - Firm Touch - Massage">
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="marble" data-parallax="0.35"></div>
+    <div class="panel reveal">
+    <h2>THE FIRM TOUCH</h2>
+    <hr class="rule">
+    <p>I’m a New York State-licensed massage therapist with experience treating NFL athletes, Broadway performers, and professional dancers. The modality I've developed is a deep, specific, and effective treatment designed to address chronic pain, tightness, and muscular imbalances incorporating several neuromuscular techniques. Every session is personalized, targeting areas of tension you didn’t even know existed, while providing actionable tips to prevent recurring issues.</p>
+    <p class="subhead">What to Expect</p>
+    <ul>
+      <li>Intake discussion and symptom review</li>
+      <li>Postural and movement observation</li>
+      <li>Targeted neuromuscular treatment</li>
+      <li>Effective aftercare recommendations</li>
+    </ul>
+    <p>Pressure is calibrated to therapeutic need and tissue response, with comfort and results prioritized throughout. You’re welcome to wear as much or as little as you feel comfortable with.</p>
+    <p>Services and Availability<br>
+    I provide both in-call (at my treatment studio near Columbus Circle), and out-call sessions anywhere in Manhattan. For late-night appointments (after 10 PM), please inquire as additional fees may apply. Standard sessions include thorough, targeted, personalized care. Additional time can be added to your treatment. First additional half hour is only $50.</p>
+    <p>Professional note: Firm Touch NYC operates as a strictly therapeutic practice. All services are professional, clinical, and conducted within clear ethical boundaries.</p>
+    </div>
+    <div class="photos reveal">
+    <img src="img/session-a.jpg" alt="Firm Touch NYC - Massage">
+    <img src="img/session-b.jpg" alt="Firm Touch NYC - Massage">
+    </div>
+  </section>
+
+  <section class="below reveal">
+    <div class="below-inner">
+    <div class="linkrow">
+      <div class="stack">
+        <a href="https://www.firmtouch.nyc/reviews">REVIEWS</a>
+        <a href="https://www.firmtouch.nyc/faq">FAQs</a>
+        <a href="https://www.firmtouch.nyc/ivii">IV I I</a>
+        <a href="https://www.firmtouch.nyc/links">LINKS</a>
+      </div>
+      <div class="wide-wrap">
+        <a class="wide" href="http://www.aiam.edu/massage-therapy/neuromuscular-massage-therapy">WHAT IS NEUROMUSCULAR THERAPY?</a>
+        <a class="wide further" href="https://www.firmtouch.nyc/ivii">FURTHER INFORMATION</a>
+      </div>
+    </div>
+    <div class="price-bar">
+      <p class="price">250/60min - 300/90min</p>
+      <p>(veteran/student/subscription discounts available)</p>
+    </div>
+    <div class="contact">
+      <div class="contact-copy">
+        <h2>LOCATION/CONTACT</h2>
+        <hr class="rule">
+        <p>Firm Touch values your privacy and discretion. Our location is not publicly listed. After securing your appointment, the address will be provided. You’ll receive a confirmation text prior to your session. House calls are also available within Lower Manhattan for an additional fee. If you have any questions or need assistance, please don’t hesitate to reach out directly.</p>
+        <p>No walk-ins. By appointment only.</p>
+        <a class="btn" href="tel:8646253348">Direct Contact</a>
+      </div>
+      <iframe title="Map of the Columbus Circle area" src="https://maps.google.com/maps?q=Columbus+Circle,+New+York&z=15&output=embed"></iframe>
+    </div>
+    <p class="call">CALL OR TEXT<br><a href="tel:8646253348">864.625.3348</a></p>
+    </div>
+  </section>
+
+  <footer>© 2019-2026 FIRM TOUCH NYC. All rights reserved.</footer>
+  <script>
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const layers = [...document.querySelectorAll("[data-parallax]")];
+    const reveals = [...document.querySelectorAll(".reveal")];
+    if (!reduce && layers.length && innerWidth > 800) {
+      let ticking = false;
+      const paint = () => {
+        const y = scrollY;
+        for (const el of layers) {
+          const parent = el.parentElement;
+          const passed = y - (parent.getBoundingClientRect().top + y);
+          el.style.transform = "translate3d(0," + (passed * Number(el.dataset.parallax)).toFixed(2) + "px,0)";
+        }
+        ticking = false;
+      };
+      addEventListener("scroll", () => {
+        if (!ticking) {
+          requestAnimationFrame(paint);
+          ticking = true;
+        }
+      }, { passive: true });
+      paint();
+    }
+    if (reduce) {
+      reveals.forEach((el) => el.classList.add("in"));
+    } else if ("IntersectionObserver" in window) {
+      const watch = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          entry.target.classList.add("in");
+          watch.unobserve(entry.target);
+        }
+      }, { threshold: 0.18 });
+      reveals.forEach((el) => watch.observe(el));
+    } else {
+      reveals.forEach((el) => el.classList.add("in"));
+    }
+  </script>
+</body>
+</html>
