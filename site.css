@@ -162,10 +162,17 @@ footer {
   background: rgba(255,255,255,0.8);
 }
 @media (max-width: 800px) {
-  .phone { font-size: 20px; }
-  .brand { letter-spacing: 0.1em; text-indent: 0.1em; }
-  h1.page-title, h2.page-title { font-size: 32px; letter-spacing: 0.04em; }
-  h3 { font-size: 22px; }
-  .page.with-toc { grid-template-columns: 1fr; }
+  body { font-size: 16px; line-height: 1.6; }
+  header { padding: 12px 14px 8px; }
+  header img { width: 40px; height: 40px; }
+  .phone { font-size: 18px; }
+  .banner { padding: 28px 16px 22px; }
+  .brand { font-size: 32px; letter-spacing: 0.08em; text-indent: 0.08em; }
+  .banner nav { gap: 10px; margin-top: 14px; }
+  .banner nav a { font-size: 18px; letter-spacing: 0.06em; }
+  h1.page-title, h2.page-title { font-size: 30px; letter-spacing: 0.04em; margin: 4px 0 18px; }
+  h3 { font-size: 20px; line-height: 1.4; margin: 22px 0 8px; }
+  .page { padding: 28px 18px 24px; }
+  .page.with-toc { grid-template-columns: 1fr; gap: 18px; }
   .toc { position: static; }
 }

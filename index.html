@@ -313,22 +313,32 @@
       .floor { left: -40px; width: calc(100% + 80px); height: 240px; bottom: 36px; }
     }
     @media (max-width: 900px) {
-      h1 { font-size: 42px; letter-spacing: 0.14em; text-indent: 0.14em; }
-      .sub { font-size: 13px; letter-spacing: 2px; }
-      .phone { font-size: 20px; }
-      .pillar { height: 220px; top: auto; bottom: 0; }
-      .floor { left: 0; width: 100%; height: 160px; bottom: 0; }
+      header { padding: 12px 14px 8px; }
+      header img { width: 40px; height: 40px; }
+      h1 { font-size: 34px; letter-spacing: 0.06em; text-indent: 0.06em; line-height: 1.15; }
+      .sub { display: block; margin-top: 12px; font-size: 12px; letter-spacing: 1.4px; line-height: 1.45; }
+      .phone { font-size: 18px; }
+      .pillar, .floor { display: none; }
       .marble { display: none; }
       .hero, .band { background: #f4f2ee url("img/marble.jpg") center / cover; }
-      .hero { min-height: 0; padding: 28px 12px 150px; }
+      .hero { min-height: 0; padding: 32px 22px 28px; }
+      .hero .btn { margin-top: 22px; }
+      .sheet { margin: 18px auto 0; padding: 0 16px; }
       .card { grid-template-columns: 1fr; }
+      .card .copy { padding: 26px 22px 22px; }
+      .card h2 .k { font-size: 14px; letter-spacing: 0.1em; }
+      .card h2 .big { font-size: 28px; letter-spacing: 0.02em; }
+      .copy p { font-size: 17px; line-height: 1.6; margin: 0 0 18px; }
       .photos { flex-direction: column; align-items: center; }
+      .photos img { width: min(100%, 420px); height: auto; aspect-ratio: 1; }
       .linkrow { flex-direction: column; align-items: center; }
-      .pillar.l { left: 0; }
-      .pillar.r { right: 0; }
-      .panel { padding: 28px 18px; }
-      .price, .call { font-size: 32px; }
-      .wide { width: 100%; }
+      .panel { padding: 28px 20px; }
+      .panel p, .contact p { font-size: 17px; line-height: 1.6; }
+      .stack { width: min(100%, 320px); letter-spacing: 0.1em; }
+      .wide, .wide.further { width: 100%; font-size: 16px; letter-spacing: 0.06em; }
+      .price { font-size: 26px; }
+      .call { font-size: 24px; }
+      .loc { font-size: 18px; letter-spacing: 0.02em; }
     }
   </style>
 </head>
