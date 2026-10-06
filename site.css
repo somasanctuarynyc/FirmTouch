@@ -97,7 +97,30 @@ header img { grid-column: 3; justify-self: end; width: 44px; height: 44px; objec
 }
 .figure { margin: 0 0 28px; }
 .figure img { width: 100%; height: auto; }
-.qmark { width: 180px; margin: 0 auto 18px; }
+.qmark { width: 250px; margin: 8px auto 8px; }
+.qmark img { width: 100%; height: auto; }
+.sheet-faq h3 {
+  margin: 34px 0 8px;
+  font-size: 18px;
+  letter-spacing: 0.14em;
+  text-align: center;
+}
+.sheet-faq .page { max-width: 760px; }
+.sheet-faq .aside { margin: -6px 0 18px 1.2rem; }
+.sheet-reviews .page { max-width: 760px; }
+.sheet-reviews .review { margin: 0 0 32px; }
+.sheet-reviews .review .meta { margin: 10px 0 0; line-height: 1.55; }
+.sheet-reviews .note {
+  margin: 18px auto 8px;
+  max-width: 34em;
+  text-align: center;
+  font-family: Praetoria, Didot, serif;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  line-height: 1.8;
+}
+.sheet-reviews .feel { margin-top: 28px; text-align: center; }
+.sheet-reviews .feel h6 { margin-top: 4px; }
 h1, h2, h3, h4, h5, h6 { font-weight: 700; color: #5e5e5e; }
 h1.page-title, h2.page-title {
   margin: 8px 0 22px;
